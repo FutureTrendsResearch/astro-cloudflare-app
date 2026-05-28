@@ -1,0 +1,40 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Content from "@/components/widgets/Content.astro";
+
+const metadata = {
+  title: "404 - Page Not Found",
+  description: "The page you're looking for doesn't exist.",
+  ignoreTitleTemplate: true,
+};
+---
+
+<BaseLayout {metadata}>
+  <Content
+    tagline="404"
+    title="Page Not Found"
+    description={[
+      "We're sorry, we can't find the page you're looking for. It may have been moved or deleted.",
+    ]}
+  />
+
+  <div
+    class="reveal mx-auto mb-12 max-w-xl rounded-3xl border border-border bg-card p-8 text-center shadow-sm md:mb-16"
+  >
+    <p class="mb-6 text-7xl font-extrabold tracking-tight text-primary">404</p>
+    <div class="flex flex-col gap-3 sm:flex-row sm:justify-center">
+      <a
+        href="/"
+        class="inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary/90"
+      >
+        Back to Home
+      </a>
+      <a
+        href="/contact"
+        class="inline-flex items-center justify-center rounded-xl border border-border bg-transparent px-6 py-3 text-sm font-semibold transition-colors hover:border-primary hover:bg-primary hover:text-white"
+      >
+        Contact
+      </a>
+    </div>
+  </div>
+</BaseLayout>

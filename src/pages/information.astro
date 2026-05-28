@@ -1,0 +1,193 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Content from "@/components/widgets/Content.astro";
+import WidgetWrapper from "@/components/widgets/WidgetWrapper.astro";
+
+const metadata = {
+  title: "Information - セキュリティ・プライバシーポリシー",
+  description:
+    "Future Trends Researchの情報セキュリティ基本方針およびプライバシーポリシーをご紹介します。",
+};
+---
+
+<BaseLayout {metadata}>
+  <Content
+    tagline="Information"
+    title="情報セキュリティ・プライバシーポリシー"
+    description={[
+      "Future Trends Researchが定める各種ポリシーについてご案内いたします。",
+    ]}
+  />
+
+  <div class="mx-auto mb-12 grid max-w-5xl gap-8 px-4 md:mb-16 md:grid-cols-2">
+    <section
+      id="security"
+      class="reveal rounded-3xl border border-border bg-card p-8 shadow-sm"
+    >
+      <p
+        class="mb-4 text-sm font-semibold uppercase tracking-wider text-primary"
+      >
+        Information Security
+      </p>
+      <h2 class="mb-6 text-3xl md:text-4xl font-bold tracking-tight">
+        情報セキュリティ基本方針
+      </h2>
+      <div class="mb-6 text-base leading-7 text-muted-foreground">
+        <p>
+          Future Trends
+          Research（以下「FTR」）は、業務で取り扱う情報資産および当社が保有する情報資産を各種の脅威から保護し、社会的責務を果たすため、情報セキュリティに関する基本方針および関連規程を定め、以下の取組みを実施します。
+        </p>
+        <ol class="mt-4 space-y-3 list-decimal list-inside text-sm leading-7">
+          <li>
+            情報セキュリティポリシーの適用範囲：FTRが業務上取得・保有するすべての情報を対象とします。
+          </li>
+          <li>
+            管理体制：情報セキュリティの運用状況を定期的に監査し、必要に応じて是正措置を行います。
+          </li>
+          <li>
+            法令等の遵守：適用される法令、国の指針および関連する規範を遵守します。
+          </li>
+          <li>
+            対策の実施：教育・啓蒙、技術的・組織的対策を継続的に実施します。
+          </li>
+          <li>
+            リテラシー向上：従業員の情報セキュリティリテラシー向上に努めます。
+          </li>
+        </ol>
+      </div>
+      <div
+        class="mt-8 border-t border-border pt-5 text-sm text-muted-foreground"
+      >
+        <p>制定：2016年5月1日</p>
+        <p class="mt-2 font-semibold text-foreground">Future Trends Research</p>
+        <p>CEO 河嶋利孝</p>
+      </div>
+    </section>
+
+    <section
+      id="privacy"
+      class="reveal rounded-3xl border border-border bg-card p-8 shadow-sm"
+    >
+      <p
+        class="mb-4 text-sm font-semibold uppercase tracking-wider text-primary"
+      >
+        Privacy Policy
+      </p>
+      <h2 class="mb-6 text-3xl md:text-4xl font-bold tracking-tight">
+        プライバシーポリシー
+      </h2>
+      <div class="mb-6 text-base leading-7 text-muted-foreground">
+        <p>
+          Future Trends
+          Research（以下「FTR」）は、お客様のプライバシーを尊重し、個人情報の適切な取扱いに努めます。本ポリシーは、当社が収集する情報の種類、利用目的、共有方法および保護措置について説明します。
+        </p>
+        <h3 class="mt-4 font-semibold text-lg">1. 収集する情報</h3>
+        <ul class="mt-2 list-disc list-inside text-sm leading-7">
+          <li>
+            個人情報：氏名、メールアドレス、電話番号等、お客様が提供する情報
+          </li>
+          <li>
+            利用情報：ウェブサイトの訪問履歴、IPアドレス、ブラウザ情報等、自動的に収集される情報
+          </li>
+          <li>
+            クッキー：サイト利用の分析や利便性向上のためにクッキーを使用します
+          </li>
+        </ul>
+
+        <h3 class="mt-4 font-semibold text-lg">2. 情報の使用目的</h3>
+        <ul class="mt-2 list-disc list-inside text-sm leading-7">
+          <li>サービス提供および品質向上</li>
+          <li>ニュースレターやキャンペーン等のご案内</li>
+          <li>お問い合わせ対応</li>
+          <li>サイト利用状況の分析</li>
+        </ul>
+
+        <h3 class="mt-4 font-semibold text-lg">3. 情報の共有</h3>
+        <p class="mt-2">
+          原則として、お客様の個人情報を第三者に提供することはありません。例外として以下の場合があります：
+        </p>
+        <ul class="mt-2 list-disc list-inside text-sm leading-7">
+          <li>法令に基づく開示要求がある場合</li>
+          <li>お客様の同意がある場合</li>
+          <li>サービス提供に必要な場合（例：決済処理業者）</li>
+        </ul>
+
+        <h3 class="mt-4 font-semibold text-lg">4. 情報の保護</h3>
+        <p class="mt-2">
+          当社は、個人情報の安全を確保するために、合理的な技術的および組織的対策（例：暗号化、アクセス制御）を講じます。
+        </p>
+
+        <h3 class="mt-4 font-semibold text-lg">5. お客様の権利</h3>
+        <ul class="mt-2 list-disc list-inside text-sm leading-7">
+          <li>情報へのアクセス</li>
+          <li>情報の訂正・削除の請求</li>
+          <li>処理の制限</li>
+          <li>データポータビリティの請求</li>
+        </ul>
+
+        <h3 class="mt-4 font-semibold text-lg">6. ポリシーの変更</h3>
+        <p class="mt-2">
+          本ポリシーは必要に応じて改定することがあります。改定があった場合はウェブサイト上で周知します。
+        </p>
+
+        <h3 class="mt-4 font-semibold text-lg">7. お問い合わせ</h3>
+        <p class="mt-2">
+          本ポリシーに関するお問い合わせは、下記までご連絡ください。
+        </p>
+        <p class="mt-2 font-semibold">会社名 Future Trends Research</p>
+        <p>
+          メール：<a
+            href="mailto:Contact@FutureTrendsResearch.com"
+            class="text-primary hover:underline"
+            >Contact@FutureTrendsResearch.com</a
+          >
+        </p>
+        <p class="mt-4">
+          お客様が安心してサービスをご利用いただけるよう、引き続き個人情報保護に努めます。
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- CTA Section                            -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <WidgetWrapper containerClass="max-w-3xl mx-auto px-4 text-center">
+    <div
+      class="rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 to-primary/10 p-8 lg:p-12"
+    >
+      <h3 class="text-2xl font-bold tracking-tight mb-3">
+        共に未来を創りましょう
+      </h3>
+      <p class="text-sm text-muted-foreground mb-6 max-w-lg mx-auto">
+        私たちのビジョンに共感いただけましたら、ぜひお気軽にお問い合わせください。新規事業の構想段階から、成長フェーズまで伴走いたします。
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold text-white shadow-md transition-all duration-200 hover:bg-primary/90 hover:shadow-lg"
+        >
+          お問い合わせはこちら
+          <svg
+            class="ml-2 h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2.5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+          </svg>
+        </a>
+        <a
+          href="/consulting"
+          class="inline-flex items-center justify-center rounded-xl border border-border bg-transparent px-8 py-3.5 text-sm font-semibold transition-all duration-200 hover:bg-primary hover:text-white hover:border-primary"
+        >
+          コンサルティングを見る
+        </a>
+      </div>
+    </div>
+  </WidgetWrapper>
+</BaseLayout>

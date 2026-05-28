@@ -1,0 +1,50 @@
+---
+import type { HeadlineProps } from "@/types/types";
+
+const { title, subtitle, tagline, classes = {} } = Astro.props as HeadlineProps;
+
+const {
+  container = "max-w-xl",
+  title: titleClass = "text-3xl md:text-4xl",
+  subtitle: subtitleClass = "text-xl",
+  tagline: taglineClass = "",
+} = classes;
+
+const hasTitleSlot = Boolean(Astro.slots.title);
+const hasSubtitleSlot = Boolean(Astro.slots.subtitle);
+---
+
+<div class={`mb-4 ${container}`}>
+  {
+    tagline && (
+      <div
+        class={`inline-flex items-center gap-2 px-3 py-1 text-primary text-lg font-semibold ${taglineClass}`}
+      >
+        {tagline}
+      </div>
+    )
+  }
+
+  {
+    hasTitleSlot ? (
+      <h2 class={`font-bold tracking-tight text-foreground mb-4 ${titleClass}`}>
+        <slot name="title" />
+      </h2>
+    ) : title ? (
+      <h2
+        class={`font-bold tracking-tight text-foreground mb-4 ${titleClass}`}
+        set:html={title}
+      />
+    ) : null
+  }
+
+  {
+    hasSubtitleSlot ? (
+      <p class={`text-muted-foreground ${subtitleClass}`}>
+        <slot name="subtitle" />
+      </p>
+    ) : subtitle ? (
+      <p class={`text-muted-foreground ${subtitleClass}`}>{subtitle}</p>
+    ) : null
+  }
+</div>

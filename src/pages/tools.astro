@@ -1,0 +1,235 @@
+---
+import { Image } from "astro:assets";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Content from "@/components/widgets/Content.astro";
+import Features from "@/components/widgets/Features.astro";
+
+const metadata = {
+  title: "Tools",
+  description:
+    "AI tools and analysis resources for research, strategy, and market intelligence.",
+};
+
+const logoModules = import.meta.glob("/src/assets/images/Company_logo/*", {
+  eager: true,
+});
+
+const findLogo = (name: string) => {
+  const normalizedName = name.normalize("NFC");
+  const entry = Object.entries(logoModules).find(([path]) =>
+    path.normalize("NFC").includes(normalizedName),
+  );
+
+  return entry?.[1].default;
+};
+
+const aiTools = [
+  {
+    title: "ChatGPT",
+    description:
+      "アイデア整理、文章作成、リサーチ補助、コード生成まで幅広く使えるAIアシスタント。",
+    icon: "lucide:message-circle",
+    iconClass: "bg-green-500/10 text-green-400",
+  },
+  {
+    title: "Claude",
+    description:
+      "長文読解、資料要約、文書レビュー、構造化された思考整理に向いたAIアシスタント。",
+    icon: "lucide:file-text",
+    iconClass: "bg-yellow-500/10 text-yellow-400",
+  },
+  {
+    title: "Gemini",
+    description:
+      "Googleサービスとの連携や、テキスト・画像を横断したマルチモーダル分析に活用できるAI。",
+    icon: "lucide:sparkles",
+    iconClass: "bg-blue-500/10 text-blue-400",
+  },
+  {
+    title: "Perplexity",
+    description:
+      "出典を確認しながら情報探索を進めたい場面に使いやすい、リサーチ型AI検索ツール。",
+    icon: "lucide:search",
+    iconClass: "bg-purple-500/10 text-purple-400",
+  },
+  {
+    title: "GitHub Copilot",
+    description:
+      "コード補完、実装案の作成、テスト作成など、開発作業を支援するAIコーディングツール。",
+    icon: "lucide:code",
+    iconClass: "bg-pink-500/10 text-pink-400",
+  },
+  {
+    title: "Cursor / Codex",
+    description:
+      "リポジトリ理解、コード編集、検証、実装タスクの分解に使えるAIエージェント型の開発環境。",
+    icon: "lucide:bot",
+    iconClass: "bg-red-500/10 text-red-400",
+  },
+];
+
+const analysisTools = [
+  {
+    title: "国立国会図書館 インターネット資料収集保存事業（WARP）",
+    summary:
+      "日本国内のウェブサイトを収集・保存し、過去に遡って情報を参照できるようにする事業です。",
+    description:
+      "ウェブサイトに掲載された情報は頻繁に更新・削除されるため、過去の情報が失われていきます。WARPでは、政府機関、地方自治体、独立行政法人、国公立大学、報道機関、企業、団体、個人のウェブサイトなどを保存しています。",
+    logo: undefined,
+    initials: "WARP",
+  },
+  {
+    title: "業界動向サーチ",
+    summary:
+      "業界の動向、ランキング、シェア、将来性、課題を分析するサイトです。",
+    description:
+      "企業の有価証券報告書や公開資料に基づき、業界の売上高、利益率、成長率、ランキング、シェア、ニュースや動向をまとめています。",
+    logo: undefined,
+    initials: "業界",
+  },
+  {
+    title: "政府統計の総合窓口 e-Stat",
+    summary:
+      "日本の政府統計を検索・閲覧・ダウンロードできる総合窓口サイトです。",
+    description:
+      "人口・世帯、労働・賃金、農林水産業、鉱工業、商業・サービス業、企業・家計・経済、住宅・土地・建設、エネルギー・水などの統計データを扱い、可視化ツールや活用事例も提供しています。",
+    logo: undefined,
+    initials: "e",
+  },
+  {
+    title: "Euromonitor International 市場調査レポート",
+    summary: "消費者市場の戦略的調査におけるグローバルな市場調査レポートです。",
+    description:
+      "世界80ヵ国、200を超えるカテゴリーの企業・市場分析を行い、ライフスタイル、人口構成、社会経済データは206ヵ国を対象としています。",
+    logo: undefined,
+    initials: "EI",
+  },
+  {
+    title: "FutureTimeline",
+    summary:
+      "技術、シンギュラリティ、未来社会の長期的な変化を考えるためのリソースです。",
+    description:
+      "気候変動、人口過多、資源枯渇、AI、高度なロボット工学、トランスヒューマン、宇宙の長期的変化など、未来について考え準備するための情報を提供しています。",
+    logo: undefined,
+    initials: "FT",
+  },
+  {
+    title: "野村総合研究所 NRI",
+    summary:
+      "コンサルティング、システム、ITソリューション、研究開発などを提供する総合コンサルティングファームです。",
+    description:
+      "経営戦略、IT戦略、業務改革、組織変革、人材育成、システム開発、クラウド、ビッグデータ、AI、IoTなどを含む幅広いサービスを展開しています。",
+    logo: findLogo("NRI"),
+    initials: "NRI",
+  },
+  {
+    title: "総務省 MIC",
+    summary:
+      "情報通信技術に関する統計データや白書などを参照できるリソースです。",
+    description:
+      "情報通信技術に関するさまざまな統計情報を含み、情報通信技術白書などの関連リソースへのリンクも提供しています。",
+    logo: findLogo("総務省MIC"),
+    initials: "MIC",
+  },
+  {
+    title: "経済レポート専門ニュース",
+    summary:
+      "経済見通し、サービス価格、AIと労働市場など、経済レポートを横断的に扱うニュースサイトです。",
+    description:
+      "AIが労働市場の不平等に与える影響や、日本経済の成長見通しなど、さまざまなトピックを取り上げています。",
+    logo: findLogo("経済レポート専門ニュース"),
+    initials: "経済",
+  },
+  {
+    title: "Bizgram",
+    summary: "さまざまなビジネスモデルと収益方法を整理するリソースです。",
+    description:
+      "営利・非営利、革新的技術の活用、社会的インパクトなど、多様なビジネスの特徴と収益構造を理解するために活用できます。",
+    logo: findLogo("Bizgram"),
+    initials: "Biz",
+  },
+  {
+    title: "科学研究費助成事業データベース",
+    summary:
+      "科学研究費助成事業による研究課題や成果を検索できるデータベースです。",
+    description:
+      "採択課題、研究実施状況報告書、研究実績報告書、研究成果報告書概要、研究成果報告書、自己評価報告書などを収録し、全分野の最新研究情報を検索できます。",
+    logo: findLogo("科学研究費助成事業"),
+    initials: "科研",
+  },
+  {
+    title: "S&P500 Map",
+    summary:
+      "S&P 500インデックスの銘柄をセクター・業界別に可視化するマップです。",
+    description:
+      "各企業を表すバブルの大きさは時価総額に基づき、1日、1週間、1か月、3か月、6か月、1年、年初来パフォーマンスを確認できます。",
+    logo: findLogo("S&P500"),
+    initials: "S&P",
+  },
+  {
+    title: "ファン総合研究所",
+    summary: "ファン心理や応援行動を深掘りする研究機関です。",
+    description:
+      "専門家、外部機関、企業、地域と協業しながら、ファンならではの心理や行動を研究し、レポートや新たなサービスを開発・発信しています。",
+    logo: findLogo("FAST"),
+    initials: "FAN",
+  },
+];
+---
+
+<BaseLayout {metadata}>
+  <Content
+    tagline="Tools"
+    title="Research & Analysis Tools"
+    description={[
+      "AIエージェントと分析リソースを整理し、調査・戦略立案・市場理解に使いやすい形でまとめています。",
+    ]}
+  />
+
+  <Features
+    tagline="AI Tools"
+    title="AI Agents & Assistants"
+    subtitle="調査、分析、文章作成、開発支援に使えるAIツールです。"
+    classes={{ container: "pt-0 md:pt-0" }}
+    features={aiTools}
+  />
+
+  <section class="mx-auto mb-12 max-w-7xl px-4 md:mb-16">
+    <div class="reveal mx-auto mb-10 max-w-3xl text-center">
+      <p class="mb-2 text-lg font-semibold text-primary">Analysis</p>
+      <h2 class="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
+        Analysis Resources
+      </h2>
+      <p class="text-muted-foreground">
+        業界分析、統計、市場調査、未来予測、研究情報を参照するためのリストです。
+      </p>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {
+        analysisTools.map((tool) => (
+          <article class="reveal flex flex-col rounded-3xl border border-border bg-card p-8 shadow-sm transition-all hover:border-primary/50 hover:shadow-md">
+            <div class="mb-6 flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border border-border bg-muted/40 p-3">
+              {tool.logo ? (
+                <Image
+                  src={tool.logo}
+                  alt={`${tool.title} logo`}
+                  class="max-h-full max-w-full object-contain"
+                />
+              ) : (
+                <span class="text-sm font-bold text-primary">
+                  {tool.initials}
+                </span>
+              )}
+            </div>
+            <h3 class="mb-3 text-xl font-bold tracking-tight">{tool.title}</h3>
+            <p class="mb-4 text-sm font-medium text-primary">{tool.summary}</p>
+            <p class="grow text-sm leading-relaxed text-muted-foreground">
+              {tool.description}
+            </p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

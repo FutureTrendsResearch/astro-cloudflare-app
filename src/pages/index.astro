@@ -1,0 +1,253 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+import { siteConfig } from "@/config/site";
+
+import Content2 from "@/components/widgets/Content2.astro";
+
+import Content from "@/components/widgets/Content.astro";
+import Features from "@/components/widgets/Features.astro";
+
+import FTR_IconImg from "@/assets/images/FTR_IconWB.png";
+import developmentImg from "@/assets/images/development-Img.png";
+import optimizationImg from "@/assets/images/optimization-Img.png";
+import consultingImg from "@/assets/images/consulting-Img.png";
+
+const metadata = {
+  title: `${siteConfig.name} - The next step for your project`,
+  description:
+    "Future technology strategy, AI application development, and new business development support.",
+  ignoreTitleTemplate: true,
+};
+
+const visionText = [
+  "Future technology strategy and new business development for organizations building what comes next.",
+];
+---
+
+<BaseLayout metadata={metadata}>
+  <div class="flex flex-col items-center text-center pt-20">
+    <!-- Future Trends Research Logo -->
+
+    <img
+      src={FTR_IconImg.src}
+      alt="Future Trends Research Logo"
+      class="w-20 h-20 md:w-60 md:h-60 m-0 opacity-90"
+    />
+  </div>
+
+  <Content
+    tagline="Future Technology Strategy & New Business Development"
+    title={`Insight Into Tomorrow <br class="hidden md:block" /> <span class="bg-linear-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Future Trends Research</span>`}
+    description={visionText}
+  >
+    <div
+      class="reveal mx-auto mt-8 max-w-xl rounded-3xl border border-border bg-card p-8 shadow-sm"
+    >
+      <p
+        class="mx-auto mb-6 max-w-md text-sm leading-relaxed text-muted-foreground"
+      >
+        {siteConfig.description}
+      </p>
+      <div class="flex flex-col gap-3 sm:flex-row sm:justify-center">
+        <a
+          href="/consulting"
+          class="inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary/90"
+        >
+          Our Consulting
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center rounded-xl border border-border bg-transparent px-6 py-3 text-sm font-semibold transition-colors hover:border-primary hover:bg-primary hover:text-white"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </Content>
+
+  <!--
+  <Features
+    tagline="Focus Areas"
+    title="From signal to strategy"
+    subtitle="We connect emerging technology signals with practical execution plans."
+    classes={{ container: "pt-0 md:pt-0" }}
+    features={[
+      {
+        title: "Technology Foresight",
+        description: "未来技術・技術トレンドを分析し、中長期戦略へ反映します。",
+        icon: "lucide:binoculars",
+        iconClass: "bg-teal-500/10 text-teal-400",
+      },
+      {
+        title: "Market Intelligence",
+        description:
+          "市場・競合・顧客インサイトを統合し、意思決定の精度を高めます。",
+        icon: "lucide:refresh-cw",
+        iconClass: "bg-yellow-500/10 text-yellow-400",
+      },
+      {
+        title: "Startup Advisory",
+        description:
+          "シードからアーリーステージまで、戦略設計と実行を伴走します。",
+        icon: "lucide:rocket",
+        iconClass: "bg-green-500/10 text-green-400",
+      },
+    ]}
+  />
+  -->
+
+  <Features
+    tagline="Features"
+    title="What's Included"
+    subtitle="A focused set of services for Development, Optimization, and Consulting."
+    classes={{ container: "pt-0 md:pt-0" }}
+    features={[
+      {
+        title: "Development",
+        description:
+          "AI-powered applications, rapid prototypes, and scalable platforms for innovation and execution.",
+        icon: "lucide:scan-search",
+        iconClass: "bg-blue-500/10 text-blue-400",
+      },
+      {
+        title: "Optimization",
+        description:
+          "Automation, analytics, and AI-driven improvements for operations and decision-making.",
+        icon: "lucide:zap",
+        iconClass: "bg-purple-500/10 text-purple-400",
+      },
+      {
+        title: "Consulting",
+        description:
+          "Opportunity discovery, business model design, and technology-driven growth strategy.",
+        icon: "lucide:briefcase",
+        iconClass: "bg-pink-500/10 text-pink-400",
+      },
+    ]}
+  />
+
+  <!-- Development Section -->
+  <Content2
+    items={[
+      {
+        title: "AI Application Development",
+        description: "AI技術を活用した事業変革・業務変革を支援。",
+        icon: "lucide:scan-search",
+        iconClass: "bg-blue-500/10 text-blue-400",
+      },
+      {
+        title: "Technology Foresight",
+        description: "未来技術・技術トレンドを分析し、中長期戦略へ反映。",
+        icon: "lucide:zap",
+        iconClass: "bg-purple-500/10 text-purple-400",
+      },
+      {
+        title: "Market Intelligence",
+        description:
+          "市場・競合・顧客インサイトを分析し、戦略的意思決定を高度化。",
+        icon: "lucide:refresh-cw",
+        iconClass: "bg-pink-500/10 text-pink-400",
+      },
+      {
+        title: "Startup Advisory",
+        description: "シード〜アーリーステージ企業向けの戦略アドバイザリー。",
+        icon: "lucide:notebook",
+        iconClass: "bg-teal-500/10 text-teal-400",
+      },
+    ]}
+    image={developmentImg}
+    imageAlt="Development"
+  >
+    <div>
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Development
+      </h3>
+      Building intelligent products and scalable digital systems.
+    </div>
+  </Content2>
+
+  <!-- Optimization Section -->
+  <Content2
+    items={[
+      {
+        title: "Business Process Optimization",
+        description:
+          "業務プロセスを分析・再設計し、生産性と意思決定速度を向上。",
+        icon: "lucide:github",
+        iconClass: "bg-indigo-500/10 text-indigo-400",
+      },
+      {
+        title: "Decision Intelligence",
+        description: "データ・AI・分析を活用し、意思決定精度を高度化。",
+        icon: "lucide:users",
+        iconClass: "bg-orange-500/10 text-orange-400",
+      },
+      {
+        title: "Customer Insight Analytics",
+        description: "顧客データを分析し、潜在ニーズと行動インサイトを抽出。",
+        icon: "lucide:binoculars",
+        iconClass: "bg-teal-500/10 text-teal-400",
+      },
+      {
+        title: "Growth Analytics",
+        description: "データ分析を通じて事業成長ドライバーを特定。",
+        icon: "lucide:refresh-cw",
+        iconClass: "bg-pink-500/10 text-pink-400",
+      },
+    ]}
+    image={optimizationImg}
+    imageAlt="Optimization"
+    isReversed={true}
+  >
+    <div>
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Optimization
+      </h3>
+      Optimizing operations, workflows, and business performance.
+    </div>
+  </Content2>
+
+  <!-- Consulting Section -->
+  <Content2
+    items={[
+      {
+        title: "Technology Foresight",
+        description:
+          "先端技術・市場トレンドのシグナルを分析し、中長期的な事業機会を特定。",
+        icon: "lucide:scan-search",
+        iconClass: "bg-blue-500/10 text-blue-400",
+      },
+      {
+        title: "Market Intelligence",
+        description:
+          "市場・競合・顧客データを統合的に分析し、意思決定精度を向上。",
+        icon: "lucide:zap",
+        iconClass: "bg-purple-500/10 text-purple-400",
+      },
+      {
+        title: "AI Transformation Strategy",
+        description:
+          "AIを軸とした事業・組織変革を設計し、競争優位性の再構築を支援。",
+        icon: "lucide:palette",
+        iconClass: "bg-teal-500/10 text-teal-400",
+      },
+      {
+        title: "Product Strategy",
+        description:
+          "プロダクトの市場適合性と成長ポテンシャルを最大化する戦略設計。",
+        icon: "lucide:palette",
+        iconClass: "bg-pink-500/10 text-pink-400",
+      },
+    ]}
+    image={consultingImg}
+    imageAlt="Consulting"
+  >
+    <div>
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Consulting
+      </h3>
+      Strategy for emerging technologies and future markets.
+    </div>
+  </Content2>
+</BaseLayout>
