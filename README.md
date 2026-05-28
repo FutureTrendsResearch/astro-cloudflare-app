@@ -1,204 +1,128 @@
-# 🚀 Astro Starter Pro
+# Future Trends Research
 
-**Astro Starter Pro** is a professional, open-source template for building fast websites using **[Astro 5](https://astro.build/) + [Tailwind CSS 4](https://tailwindcss.com/)**. Designed with industry best practices, optimized SEO, and a modern development experience.
+Future Trends Research の公式サイトです。
 
-<br>
+シードステージに特化した未来技術リサーチ、AI 活用、事業戦略コンサルティングの内容を紹介するための Astro 製スタティックサイトです。トップページ、サービス紹介、料金、調査・分析ツール、問い合わせ、情報セキュリティ・プライバシーポリシーを含みます。
 
-[![GitHub stars](https://badgen.net/github/stars/devgelo-labs/astro-starter-pro?icon=github&label=Star)](https://github.com/devgelo-labs/astro-starter-pro)
-[![Clones](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fangelop47%2Fastro-starter-template%2Fmain%2F.github%2Fdata%2Fclones.json&query=%24.count&label=Clones&color=brightgreen&style=flat-square&logo=github)](https://github.com/devgelo-labs/astro-starter-pro)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](./LICENSE)
-[![Astro](https://img.shields.io/badge/Astro-5.0-orange?style=flat-square&logo=astro)](https://astro.build/)
-[![Tailwind](https://img.shields.io/badge/Tailwind-4.0-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
-[![Maintainer](https://img.shields.io/badge/maintainer-devgelo-purple?style=flat-square)](https://github.com/devgelo-labs)
+## 概要
 
-<br>
+- サイト名: `Future Trends Research`
+- 本番 URL: `https://futuretrendsresearch.com`
+- Astro 設定上の `site`: `https://cloudflare-workers-autoconfig-futuretrendsresearch-astro.futuretrendsresearch.workers.dev`
+- 主要言語: 日本語
+- 出力形式: 静的サイト
 
-<details open>
-<summary>Table of Contents</summary>
+## 主なページ
 
-- [Demo](#demo)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Quick Start](#quick-start)
-- [Configuration](#configuration)
-- [Content Management](#content-management)
-- [Commands](#commands)
-- [Support the Project](#support-the-project)
-- [License](#license)
+| パス | 内容 |
+| --- | --- |
+| `/` | Future Trends Research の概要、Development / Optimization / Consulting の紹介 |
+| `/about` | ビジョン、バリュー、組織としての姿勢 |
+| `/consulting` | 新規事業・起業支援のコンサルティング内容、成長モデル、事業計画、戦略フレームワーク |
+| `/price` | メール、リモート、プレミアムの各コンサルティング料金プラン |
+| `/tools` | AI ツール、分析リソース、市場調査・統計・未来予測系リソース一覧 |
+| `/contact` | 問い合わせフォームと連絡手段 |
+| `/information` | 情報セキュリティ基本方針、プライバシーポリシー |
+| `/404` | Not Found ページ |
 
-</details>
+## 技術スタック
 
-<br>
+- [Astro](https://astro.build/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [MDX](https://mdxjs.com/)
+- [astro-icon](https://github.com/natemoo-re/astro-icon)
+- [Vercel Analytics](https://vercel.com/analytics)
 
-## Demo
-
-📌 [https://astrostarterpro.com/](https://astrostarterpro.com/)
-
-## Features
-
-- ✅ **Dark & Light Mode**: Clean implementation.
-- ✅ **Optimized SEO**: Automatic meta tags, Structured Data (JSON-LD), RSS Feed, Open Graph, Twitter Cards, and native Sitemap.
-- ✅ **Native Scroll Animations**: High-performance, JS-light scroll reveal animations using `Intersection Observer`.
-- ✅ **Clean Architecture**: Organized and scalable code.
-- ✅ **Reusable Components**: Navbar, Footer, and modern Layouts with Tailwind v4.
-
-<br>
-
-<img alt="Image" src="./.github/astro-starter-pro.webp" />
-
-<br>
-
-<img alt="PageSpeed Insights Score 100/100" src="https://github.com/user-attachments/assets/541d4bfc-bcb9-4287-bd91-08564108d706" />
-
-<br>
-
-## Tech Stack
-
-This template is built with modern, high-performance technologies:
-
-- **[Astro 5](https://astro.build/)**: The web framework for building content-driven websites.
-- **[Tailwind CSS 4](https://tailwindcss.com/)**: A utility-first CSS framework for rapid UI development.
-- **[TypeScript](https://www.typescriptlang.org/)**: Strongly typed programming language that builds on JavaScript.
-- **[MDX](https://mdxjs.com/)**: Markdown for the component era, allowing you to use JSX in your markdown content.
-
-<br>
-
-## Project Structure
-
-A quick overview of the folder structure to help you understand where everything is located:
+## ディレクトリ構成
 
 ```text
-/
-├── public/                # Static assets (fonts, favicon, images outside of processing)
+.
+├── public/                  # favicon や公開画像などの静的ファイル
 ├── src/
-│   ├── assets/            # Images and assets to be processed by Astro
-│   ├── components/        # Reusable UI components (Navbar, Footer, SEO, etc.)
-│   ├── config/            # Centralized site configuration (site.ts)
-│   ├── content/           # Blog posts and content collections (Markdown/MDX)
-│   ├── layouts/           # Base page layouts
-│   ├── pages/             # File-based routing (pages and endpoints)
-│   ├── styles/            # Global CSS and Tailwind directives
-│   ├── types/             # TypeScript type definitions
-│   └── content.config.ts  # Astro Content Collections configuration
-├── astro.config.mjs       # Astro configuration file
-└── tailwind.config.mjs    # Tailwind CSS configuration
+│   ├── assets/              # Astro で最適化する画像アセット
+│   ├── components/          # レイアウト、SEO、UI、ウィジェット部品
+│   ├── config/site.ts       # サイト名、説明文、URL、ナビゲーション設定
+│   ├── layouts/             # 共通ページレイアウト
+│   ├── pages/               # ファイルベースルーティング
+│   ├── styles/global.css    # グローバル CSS と Tailwind 設定
+│   └── types/               # 型定義
+├── astro.config.mjs         # Astro / sitemap / MDX / i18n / Vite 設定
+├── eslint.config.js         # ESLint 設定
+├── package.json             # npm scripts と依存関係
+└── tsconfig.json            # TypeScript 設定
 ```
 
-<br>
-
-## Quick Start
-
-To start with this project locally, clone the repository and install dependencies:
+## セットアップ
 
 ```bash
-# Clone the repository
-git clone https://github.com/devgelo-labs/astro-starter-pro.git
-
-# If you like it, don't forget to leave a star! ⭐
-cd astro-starter-pro
 npm install
 npm run dev
 ```
 
-<br>
+開発サーバーは通常 `http://localhost:4321` で起動します。
 
-## Configuration
+## npm scripts
 
-All global site information is managed in `src/config/site.ts`. Update this file with your data:
+| コマンド | 内容 |
+| --- | --- |
+| `npm run dev` | 開発サーバーを起動 |
+| `npm run build` | 本番用の静的ファイルを `dist/` に生成 |
+| `npm run preview` | ビルド済みサイトをローカルで確認 |
+| `npm run check` | Astro の診断を実行 |
+| `npm run typecheck` | TypeScript の型チェックを実行 |
+| `npm run lint:check` | ESLint のチェックを実行 |
+| `npm run lint` | ESLint の自動修正を実行 |
+| `npm run format` | Prettier で整形 |
+| `npm run fix` | Prettier と ESLint 自動修正をまとめて実行 |
+| `npm test` | Vitest を実行 |
 
-```typescript
-// src/config/site.ts
-import ogImage from "../assets/og-image.png";
+## サイト設定の変更
 
-export const siteConfig = {
-  name: "Astro Starter Pro",
-  description:
-    "Starter template optimized for SEO and performance. A solid foundation to start your projects with best practices.",
-  url: "https://astrostarterpro.com",
-  lang: "en",
-  locale: "en_US",
-  author: "Devgelo",
-  twitter: "@Devgelo",
-  ogImage: ogImage,
-  socialLinks: {
-    twitter: "https://twitter.com",
-    github: "https://github.com/devgelo-labs/astro-starter-pro",
-    discord: "https://discord.com",
-  },
-  navLinks: [
-    { text: "Home", href: "/" },
-    { text: "About", href: "/about" },
-    { text: "Services", href: "/services" },
-    { text: "Blog", href: "/blog" },
-    { text: "Contact", href: "/contact" },
-    { text: "Widgets", href: "/widgets" },
-  ],
-};
+グローバルなサイト情報は `src/config/site.ts` で管理しています。
+
+主に変更する項目:
+
+- `name`: サイト名
+- `description`: SEO やトップページで使う説明文
+- `url`: 公開 URL
+- `lang` / `locale`: 言語とロケール
+- `author`: 著者・運営者名
+- `socialLinks`: SNS などの外部リンク
+- `navLinks`: ヘッダーのナビゲーション
+
+Astro 側のサイト URL、サイトマップ、MDX、i18n、プリフェッチ、ビルド設定は `astro.config.mjs` で管理しています。
+
+## 画像とアセット
+
+- ページ内で最適化したい画像は `src/assets/images/` に配置します。
+- そのまま公開したい静的ファイルは `public/` に配置します。
+- `src/assets/images/Company_logo/` は `/tools` ページの分析リソース表示で利用します。
+
+## ページ編集の目安
+
+- トップページ: `src/pages/index.astro`
+- About: `src/pages/about.astro`
+- Consulting: `src/pages/consulting.astro`
+- Price: `src/pages/price.astro`
+- Tools: `src/pages/tools.astro`
+- Contact: `src/pages/contact.astro`
+- Information: `src/pages/information.astro`
+
+共通レイアウトは `src/layouts/BaseLayout.astro`、ヘッダーとフッターは `src/components/layout/` にあります。
+
+## デプロイ前チェック
+
+```bash
+npm run format
+npm run lint:check
+npm run check
+npm run typecheck
+npm run build
 ```
 
-## Content Management
+`npm run build` が成功すると、成果物は `dist/` に生成されます。
 
-This template uses **Astro Content Collections** to manage blog posts.
+## ライセンス
 
-To add a new blog post, simply create a new `.md` or `.mdx` file inside the `src/content/blog/` directory.
-
-### Frontmatter Schema
-
-Each blog post must include the following frontmatter at the top of the file:
-
-```yaml
----
-title: "Your Post Title"
-description: "A brief summary of your post for SEO."
-pubDate: 2024-03-20
-author: "Author Name"
-image: "/images/your-cover-image.webp" # Optional
-tags: ["Astro", "Tailwind"] # Optional
-category: "Web Development" # Optional
----
-Your markdown or MDX content goes here...
-```
-
-<br>
-
-## Commands
-
-| Command             | Action                                             |
-| :------------------ | :------------------------------------------------- |
-| `npm run dev`       | Starts the development server at `localhost:4321`. |
-| `npm run build`     | Generates the static site in the `dist/` folder.   |
-| `npm run preview`   | Previews the production build locally.             |
-| `npm run lint`      | Runs ESLint to ensure code quality.                |
-| `npm run format`    | Formats code with Prettier.                        |
-| `npm run fix`       | Runs format and lint auto-fix.                     |
-| `npm run check`     | Runs astro check for diagnostics.                  |
-| `npm run typecheck` | Verifies TypeScript types.                         |
-
-<br>
-
-## Support the Project
-
-If you find this starter useful, please consider giving it a ⭐ on GitHub! It helps more people discover the project.
-
-<br>
-
-## License
-
-This project is under the **MIT** license. See the [LICENSE](./LICENSE) file for more details.
-
-## 🤝 Contributing
-
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. **Fork** the Project
-2. Create your **Feature Branch** (`git checkout -b feature/AmazingFeature`)
-3. **Commit** your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a **Pull Request**
-
-For more details, please check our [Contributing Guide](./CONTRIBUTING.md).
-
----
-
-Designed by [Devgelo Labs](https://github.com/devgelo-labs)
+このプロジェクトは MIT ライセンスです。詳細は `LICENSE` を確認してください。
