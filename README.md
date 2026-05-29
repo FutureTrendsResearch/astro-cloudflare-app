@@ -123,6 +123,30 @@ npm run build
 
 `npm run build` が成功すると、成果物は `dist/` に生成されます。
 
+## Cloudflare Workers へのデプロイ
+
+このプロジェクトは `output: "static"` の静的サイトです。**`@astrojs/cloudflare` アダプターは不要**です。`wrangler.jsonc` で `dist/` を静的アセットとして配信します。
+
+Workers Builds（GitHub 連携）では **デプロイコマンドが必須** です。ダッシュボードの **ビルド** 設定は次のとおりにしてください。
+
+| 項目 | 値 |
+| --- | --- |
+| ビルドコマンド | `npm run build` |
+| デプロイコマンド | `npx wrangler deploy` または `npm run deploy` |
+| パス | `/`（リポジトリルート） |
+
+`wrangler.jsonc` の `name` は、Cloudflare ダッシュボードの **Worker 名**（例: `astro-cloudflare-app`）と一致させてください。
+
+### なぜ KV エラーが出ていたか
+
+`wrangler.jsonc` がリポジトリにない状態で `npx wrangler deploy` を実行すると、Wrangler が Astro 向けに **自動設定**（`astro add cloudflare`）を走らせ、`SESSION` 用 KV の作成を試みます。同名 KV が既にあると `code: 10014` で失敗します。
+
+リポジトリに静的用の `wrangler.jsonc` を置くと自動設定はスキップされ、KV なしで `dist/` だけがデプロイされます。
+
+### プレビュー（非本番ブランチ）
+
+必要なら **非本番ブランチのデプロイコマンド** に `npx wrangler versions upload` を指定します（本番は `npx wrangler deploy` のまま）。
+
 ## ライセンス
 
 このプロジェクトは MIT ライセンスです。詳細は `LICENSE` を確認してください。
