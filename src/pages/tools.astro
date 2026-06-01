@@ -3,6 +3,11 @@ import { Image } from "astro:assets";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Content from "@/components/widgets/Content.astro";
 import Features from "@/components/widgets/Features.astro";
+import chatgptLogo from "@/assets/images/ai-tools/openai.svg";
+import claudeLogo from "@/assets/images/ai-tools/anthropic.svg";
+import geminiLogo from "@/assets/images/ai-tools/googlegemini.svg";
+import perplexityLogo from "@/assets/images/ai-tools/perplexity.svg";
+import githubCopilotLogo from "@/assets/images/ai-tools/githubcopilot.svg";
 
 const metadata = {
   title: "Tools",
@@ -28,36 +33,36 @@ const aiTools = [
     title: "ChatGPT",
     description:
       "アイデア整理、文章作成、リサーチ補助、コード生成まで幅広く使えるAIアシスタント。",
-    icon: "lucide:message-circle",
-    iconClass: "bg-green-500/10 text-green-400",
+    logo: chatgptLogo,
+    href: "https://chatgpt.com/",
   },
   {
     title: "Claude",
     description:
       "長文読解、資料要約、文書レビュー、構造化された思考整理に向いたAIアシスタント。",
-    icon: "lucide:file-text",
-    iconClass: "bg-yellow-500/10 text-yellow-400",
+    logo: claudeLogo,
+    href: "https://claude.ai/",
   },
   {
     title: "Gemini",
     description:
       "Googleサービスとの連携や、テキスト・画像を横断したマルチモーダル分析に活用できるAI。",
-    icon: "lucide:sparkles",
-    iconClass: "bg-blue-500/10 text-blue-400",
+    logo: geminiLogo,
+    href: "https://gemini.google.com/",
   },
   {
     title: "Perplexity",
     description:
       "出典を確認しながら情報探索を進めたい場面に使いやすい、リサーチ型AI検索ツール。",
-    icon: "lucide:search",
-    iconClass: "bg-purple-500/10 text-purple-400",
+    logo: perplexityLogo,
+    href: "https://www.perplexity.ai/",
   },
   {
     title: "GitHub Copilot",
     description:
       "コード補完、実装案の作成、テスト作成など、開発作業を支援するAIコーディングツール。",
-    icon: "lucide:code",
-    iconClass: "bg-pink-500/10 text-pink-400",
+    logo: githubCopilotLogo,
+    href: "https://github.com/features/copilot",
   },
   {
     title: "Cursor / Codex",

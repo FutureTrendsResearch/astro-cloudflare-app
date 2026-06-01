@@ -1,9 +1,15 @@
 ---
+import { Image } from "astro:assets";
 import WidgetWrapper from "./WidgetWrapper.astro";
 import type { FeaturesProps } from "@/types/types";
 import { Icon } from "astro-icon/components";
 import Card from "@/components/ui/Card.astro";
 import Headline from "@/components/ui/Headline.astro";
+
+const externalLinkProps = {
+  target: "_blank",
+  rel: "noopener noreferrer",
+} as const;
 
 const {
   features = [],
@@ -36,21 +42,66 @@ const { container: containerClassProp = "", ...otherClasses } = classes;
   />
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
     {
-      features.map((feature) => (
-        <Card>
-          {feature.icon && (
+      features.map((feature) => {
+        const linkLabel = `${feature.title} の公式サイトを開く`;
+
+        const iconBox = feature.logo ? (
+          <div
+            class:list={[
+              "mb-6 flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border border-border bg-muted/40 p-3 transition-colors",
+              feature.href && "group-hover:border-primary/50",
+            ]}
+          >
+            <Image
+              src={feature.logo}
+              alt=""
+              class="max-h-full max-w-full object-contain"
+            />
+          </div>
+        ) : (
+          feature.icon && (
             <div
-              class={`w-12 h-12 rounded-lg flex items-center justify-center mb-6 ${feature.iconClass ? feature.iconClass : "bg-primary/10 text-primary"}`}
+              class:list={[
+                "mb-6 flex h-12 w-12 items-center justify-center rounded-lg",
+                feature.iconClass ?? "bg-primary/10 text-primary",
+              ]}
             >
-              <Icon name={feature.icon} class="w-6 h-6" />
+              <Icon name={feature.icon} class="h-6 w-6" />
             </div>
-          )}
-          <h3 class="text-xl font-bold text-foreground mb-3">
-            {feature.title}
-          </h3>
-          <p class="text-muted-foreground text-sm">{feature.description}</p>
-        </Card>
-      ))
+          )
+        );
+
+        return (
+          <Card class={feature.href ? "group" : undefined}>
+            {feature.href ? (
+              <a
+                href={feature.href}
+                {...externalLinkProps}
+                class="mb-3 inline-block rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                aria-label={linkLabel}
+              >
+                {iconBox}
+              </a>
+            ) : (
+              iconBox
+            )}
+            <h3 class="mb-3 text-xl font-bold text-foreground">
+              {feature.href ? (
+                <a
+                  href={feature.href}
+                  {...externalLinkProps}
+                  class="transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                >
+                  {feature.title}
+                </a>
+              ) : (
+                feature.title
+              )}
+            </h3>
+            <p class="text-sm text-muted-foreground">{feature.description}</p>
+          </Card>
+        );
+      })
     }
   </div>
 </WidgetWrapper>

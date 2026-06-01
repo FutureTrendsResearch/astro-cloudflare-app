@@ -11,6 +11,8 @@ export interface Feature {
   description: string;
   icon?: string;
   iconClass?: string;
+  logo?: ImageMetadata;
+  href?: string;
 }
 
 export type Value = Feature;
