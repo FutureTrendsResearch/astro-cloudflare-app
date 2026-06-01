@@ -8,6 +8,17 @@ import claudeLogo from "@/assets/images/ai-tools/anthropic.svg";
 import geminiLogo from "@/assets/images/ai-tools/googlegemini.svg";
 import perplexityLogo from "@/assets/images/ai-tools/perplexity.svg";
 import githubCopilotLogo from "@/assets/images/ai-tools/githubcopilot.svg";
+import ndlLogo from "@/assets/images/analysis-tools/favicon-ndl-go-jp.png";
+import gyokaiSearchLogo from "@/assets/images/analysis-tools/favicon-gyokai-search-com.png";
+import eStatLogo from "@/assets/images/analysis-tools/favicon-e-stat-go-jp.png";
+import giiLogo from "@/assets/images/analysis-tools/favicon-gii-co-jp.png";
+import futureTimelineLogo from "@/assets/images/analysis-tools/favicon-futuretimeline-net.png";
+import finvizLogo from "@/assets/images/analysis-tools/favicon-finviz-com.png";
+
+const externalLinkProps = {
+  target: "_blank",
+  rel: "noopener noreferrer",
+} as const;
 
 const metadata = {
   title: "Tools",
@@ -80,8 +91,9 @@ const analysisTools = [
       "日本国内のウェブサイトを収集・保存し、過去に遡って情報を参照できるようにする事業です。",
     description:
       "ウェブサイトに掲載された情報は頻繁に更新・削除されるため、過去の情報が失われていきます。WARPでは、政府機関、地方自治体、独立行政法人、国公立大学、報道機関、企業、団体、個人のウェブサイトなどを保存しています。",
-    logo: undefined,
-    initials: "WARP",
+    logo: ndlLogo,
+    href: "https://www.ndl.go.jp",
+    initials: "NDL",
   },
   {
     title: "業界動向サーチ",
@@ -89,7 +101,8 @@ const analysisTools = [
       "業界の動向、ランキング、シェア、将来性、課題を分析するサイトです。",
     description:
       "企業の有価証券報告書や公開資料に基づき、業界の売上高、利益率、成長率、ランキング、シェア、ニュースや動向をまとめています。",
-    logo: undefined,
+    logo: gyokaiSearchLogo,
+    href: "https://gyokai-search.com",
     initials: "業界",
   },
   {
@@ -98,15 +111,17 @@ const analysisTools = [
       "日本の政府統計を検索・閲覧・ダウンロードできる総合窓口サイトです。",
     description:
       "人口・世帯、労働・賃金、農林水産業、鉱工業、商業・サービス業、企業・家計・経済、住宅・土地・建設、エネルギー・水などの統計データを扱い、可視化ツールや活用事例も提供しています。",
-    logo: undefined,
+    logo: eStatLogo,
+    href: "https://www.e-stat.go.jp",
     initials: "e",
   },
   {
-    title: "Euromonitor International 市場調査レポート",
+    title: "市場調査レポート Euromonitor International ",
     summary: "消費者市場の戦略的調査におけるグローバルな市場調査レポートです。",
     description:
       "世界80ヵ国、200を超えるカテゴリーの企業・市場分析を行い、ライフスタイル、人口構成、社会経済データは206ヵ国を対象としています。",
-    logo: undefined,
+    logo: giiLogo,
+    href: "https://www.gii.co.jp/publisher/eo/",
     initials: "EI",
   },
   {
@@ -115,7 +130,8 @@ const analysisTools = [
       "技術、シンギュラリティ、未来社会の長期的な変化を考えるためのリソースです。",
     description:
       "気候変動、人口過多、資源枯渇、AI、高度なロボット工学、トランスヒューマン、宇宙の長期的変化など、未来について考え準備するための情報を提供しています。",
-    logo: undefined,
+    logo: futureTimelineLogo,
+    href: "https://www.futuretimeline.net",
     initials: "FT",
   },
   {
@@ -125,6 +141,7 @@ const analysisTools = [
     description:
       "経営戦略、IT戦略、業務改革、組織変革、人材育成、システム開発、クラウド、ビッグデータ、AI、IoTなどを含む幅広いサービスを展開しています。",
     logo: findLogo("NRI"),
+    href: "https://www.nri.com/jp/index.html",
     initials: "NRI",
   },
   {
@@ -134,6 +151,7 @@ const analysisTools = [
     description:
       "情報通信技術に関するさまざまな統計情報を含み、情報通信技術白書などの関連リソースへのリンクも提供しています。",
     logo: findLogo("総務省MIC"),
+    href: "https://www.soumu.go.jp/english/",
     initials: "MIC",
   },
   {
@@ -143,6 +161,7 @@ const analysisTools = [
     description:
       "AIが労働市場の不平等に与える影響や、日本経済の成長見通しなど、さまざまなトピックを取り上げています。",
     logo: findLogo("経済レポート専門ニュース"),
+    href: "https://www.jri.co.jp/report/",
     initials: "経済",
   },
   {
@@ -151,6 +170,7 @@ const analysisTools = [
     description:
       "営利・非営利、革新的技術の活用、社会的インパクトなど、多様なビジネスの特徴と収益構造を理解するために活用できます。",
     logo: findLogo("Bizgram"),
+    href: "https://bizgram.zukai.co",
     initials: "Biz",
   },
   {
@@ -160,6 +180,7 @@ const analysisTools = [
     description:
       "採択課題、研究実施状況報告書、研究実績報告書、研究成果報告書概要、研究成果報告書、自己評価報告書などを収録し、全分野の最新研究情報を検索できます。",
     logo: findLogo("科学研究費助成事業"),
+    href: "https://kaken.nii.ac.jp/ja/",
     initials: "科研",
   },
   {
@@ -168,7 +189,8 @@ const analysisTools = [
       "S&P 500インデックスの銘柄をセクター・業界別に可視化するマップです。",
     description:
       "各企業を表すバブルの大きさは時価総額に基づき、1日、1週間、1か月、3か月、6か月、1年、年初来パフォーマンスを確認できます。",
-    logo: findLogo("S&P500"),
+    logo: finvizLogo,
+    href: "https://finviz.com/map",
     initials: "S&P",
   },
   {
@@ -177,6 +199,7 @@ const analysisTools = [
     description:
       "専門家、外部機関、企業、地域と協業しながら、ファンならではの心理や行動を研究し、レポートや新たなサービスを開発・発信しています。",
     logo: findLogo("FAST"),
+    href: "https://www.fanbasecompany.com/fansoken/",
     initials: "FAN",
   },
 ];
@@ -212,13 +235,15 @@ const analysisTools = [
 
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       {
-        analysisTools.map((tool) => (
-          <article class="reveal flex flex-col rounded-3xl border border-border bg-card p-8 shadow-sm transition-all hover:border-primary/50 hover:shadow-md">
-            <div class="mb-6 flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border border-border bg-muted/40 p-3">
+        analysisTools.map((tool) => {
+          const linkLabel = `${tool.title} の公式サイトを開く`;
+
+          const iconBox = (
+            <div class="mb-6 flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border border-border bg-muted/40 p-3 transition-colors group-hover:border-primary/50">
               {tool.logo ? (
                 <Image
                   src={tool.logo}
-                  alt={`${tool.title} logo`}
+                  alt=""
                   class="max-h-full max-w-full object-contain"
                 />
               ) : (
@@ -227,13 +252,34 @@ const analysisTools = [
                 </span>
               )}
             </div>
-            <h3 class="mb-3 text-xl font-bold tracking-tight">{tool.title}</h3>
-            <p class="mb-4 text-sm font-medium text-primary">{tool.summary}</p>
-            <p class="grow text-sm leading-relaxed text-muted-foreground">
-              {tool.description}
-            </p>
-          </article>
-        ))
+          );
+
+          return (
+            <article class="reveal group flex flex-col rounded-3xl border border-border bg-card p-8 shadow-sm transition-all hover:border-primary/50 hover:shadow-md">
+              <a
+                href={tool.href}
+                {...externalLinkProps}
+                class="mb-3 inline-block rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                aria-label={linkLabel}
+              >
+                {iconBox}
+              </a>
+              <h3 class="mb-3 text-xl font-bold tracking-tight">
+                <a
+                  href={tool.href}
+                  {...externalLinkProps}
+                  class="transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                >
+                  {tool.title}
+                </a>
+              </h3>
+              <p class="mb-4 text-sm font-medium text-primary">{tool.summary}</p>
+              <p class="grow text-sm leading-relaxed text-muted-foreground">
+                {tool.description}
+              </p>
+            </article>
+          );
+        })
       }
     </div>
   </section>
