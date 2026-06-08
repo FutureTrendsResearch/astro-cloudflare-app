@@ -2,7 +2,6 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Content from "@/components/widgets/Content.astro";
 import WidgetWrapper from "@/components/widgets/WidgetWrapper.astro";
-import { Fragment } from "astro/jsx-runtime";
 import { Image, getImage } from "astro:assets";
 import visionImage from "@/assets/images/vision-Img.png";
 
@@ -203,7 +202,7 @@ const optimizedImage = await getImage({
           <div class="group relative flex flex-col rounded-2xl border border-border/60 bg-card p-6 lg:p-8 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5">
             <div class="flex items-center gap-3 mb-4">
               <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors duration-200 group-hover:bg-primary group-hover:text-white">
-                <Fragment set:html={value.icon} />
+                <span class="flex h-5 w-5" set:html={value.icon} />
               </div>
               <h3 class="text-lg font-bold tracking-tight">{value.title}</h3>
             </div>

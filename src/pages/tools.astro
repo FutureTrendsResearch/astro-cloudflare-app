@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Content from "@/components/widgets/Content.astro";
 import Features from "@/components/widgets/Features.astro";
@@ -26,9 +27,12 @@ const metadata = {
     "AI tools and analysis resources for research, strategy, and market intelligence.",
 };
 
-const logoModules = import.meta.glob("/src/assets/images/Company_logo/*", {
-  eager: true,
-});
+const logoModules = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/images/Company_logo/*",
+  {
+    eager: true,
+  },
+);
 
 const findLogo = (name: string) => {
   const normalizedName = name.normalize("NFC");
