@@ -8,54 +8,168 @@ const metadata = {
     "Future Trends Researchのリサーチ、事業開発、AI活用に関する記事を掲載しています。",
 };
 
-const posts = [
+const categories = [
   {
-    title: "未来技術リサーチの始め方",
-    category: "Research",
-    date: "2026.01.20",
-    description:
-      "技術トレンドを事業機会に変えるための情報収集、仮説づくり、検証の進め方を整理します。",
-    image: "/blog/welcome.webp",
+    name: "Research",
+    summary: "未来技術、市場変化、産業構造を読み解くためのリサーチノート。",
+    notes: [
+      {
+        title: "未来技術リサーチの始め方",
+        date: "2026.01.20",
+        description:
+          "技術トレンドを事業機会に変えるための情報収集、仮説づくり、検証の進め方を整理します。",
+        image: "/blog/welcome.webp",
+      },
+      {
+        title: "兆しを見逃さない情報ソース設計",
+        date: "2026.01.13",
+        description:
+          "論文、特許、統計、業界ニュースを組み合わせて、初期シグナルを継続的に観測する方法です。",
+        image: "/blog/blog_post_5_1768848750922.webp",
+      },
+      {
+        title: "技術成熟度を事業判断に接続する",
+        date: "2026.01.06",
+        description:
+          "TRL、導入障壁、コスト曲線を並べ、投資やPoCのタイミングを見極めるためのメモです。",
+        image: "/blog/blog_post_6_1768848765056.webp",
+      },
+    ],
   },
   {
-    title: "AIエージェント時代の市場分析",
-    category: "AI",
-    date: "2026.01.18",
-    description:
-      "AIツールを使った市場調査の効率化と、人が担うべき判断ポイントについて考えます。",
-    image: "/blog/blog_post_1_1768848683359.webp",
+    name: "AI",
+    summary: "AIエージェント、生成AI、業務変革に関する実践的な観察記録。",
+    notes: [
+      {
+        title: "AIエージェント時代の市場分析",
+        date: "2026.01.18",
+        description:
+          "AIツールを使った市場調査の効率化と、人が担うべき判断ポイントについて考えます。",
+        image: "/blog/blog_post_1_1768848683359.webp",
+      },
+      {
+        title: "生成AI導入で最初に設計するKPI",
+        date: "2026.01.11",
+        description:
+          "作業時間の削減だけではなく、品質、再現性、意思決定速度を測るための評価軸をまとめます。",
+        image: "/blog/blog_post_7_1768850538178.webp",
+      },
+      {
+        title: "AIワークフローの権限設計",
+        date: "2026.01.04",
+        description:
+          "人とAIの役割分担、承認ポイント、ログ管理を整理し、安全に業務へ組み込む考え方です。",
+        image: "/blog/blog_post_8_1768850554501.webp",
+      },
+    ],
   },
   {
-    title: "シード期の事業戦略メモ",
-    category: "Strategy",
-    date: "2026.01.16",
-    description:
-      "初期フェーズの事業に必要な顧客理解、競合整理、ロードマップ設計の観点をまとめます。",
-    image: "/blog/blog_post_2_1768848698871.webp",
+    name: "Strategy",
+    summary: "シード期から成長期までの事業戦略、競争優位、ロードマップ設計。",
+    notes: [
+      {
+        title: "シード期の事業戦略メモ",
+        date: "2026.01.16",
+        description:
+          "初期フェーズの事業に必要な顧客理解、競合整理、ロードマップ設計の観点をまとめます。",
+        image: "/blog/blog_post_2_1768848698871.webp",
+      },
+      {
+        title: "勝ち筋を言語化する市場選定",
+        date: "2026.01.09",
+        description:
+          "市場規模、参入余地、顧客課題の深さを比較し、集中すべき初期市場を定めるための視点です。",
+        image: "/blog/blog_post_9_1768850568154.webp",
+      },
+      {
+        title: "競合比較を意思決定資料に変える",
+        date: "2026.01.02",
+        description:
+          "機能表ではなく、顧客価値、価格、チャネル、スイッチングコストから差別化を整理します。",
+        image: "/blog/blog_post_10_1768850582328.webp",
+      },
+    ],
   },
   {
-    title: "リサーチ成果を伝わる資料にする",
-    category: "Output",
-    date: "2026.01.14",
-    description:
-      "調査結果を意思決定につなげるための構成、表現、エグゼクティブサマリーの作り方です。",
-    image: "/blog/markdown.webp",
+    name: "Output",
+    summary: "リサーチや分析を、伝わる資料・提案・レポートへ変換する方法。",
+    notes: [
+      {
+        title: "リサーチ成果を伝わる資料にする",
+        date: "2026.01.14",
+        description:
+          "調査結果を意思決定につなげるための構成、表現、エグゼクティブサマリーの作り方です。",
+        image: "/blog/markdown.webp",
+      },
+      {
+        title: "1枚で伝える仮説サマリー",
+        date: "2026.01.07",
+        description:
+          "結論、根拠、示唆、次アクションを1枚に収め、会議で議論が進む資料に整えます。",
+        image: "/blog/blog_post_11_1768850597259.webp",
+      },
+      {
+        title: "経営向けレポートの粒度調整",
+        date: "2025.12.31",
+        description:
+          "詳細分析を残しながら、意思決定者が短時間で判断できる見出しと図表の設計を考えます。",
+        image: "/blog/blog_post_12_1768850610966.webp",
+      },
+    ],
   },
   {
-    title: "産業構造を見るための基本フレーム",
-    category: "Analysis",
-    date: "2026.01.12",
-    description:
-      "市場規模、バリューチェーン、規制、技術成熟度を組み合わせて産業の変化を読み解きます。",
-    image: "/blog/blog_post_3_1768848720552.webp",
+    name: "Analysis",
+    summary: "市場、顧客、競合、規制を構造化して読むための分析フレーム。",
+    notes: [
+      {
+        title: "産業構造を見るための基本フレーム",
+        date: "2026.01.12",
+        description:
+          "市場規模、バリューチェーン、規制、技術成熟度を組み合わせて産業の変化を読み解きます。",
+        image: "/blog/blog_post_3_1768848720552.webp",
+      },
+      {
+        title: "バリューチェーンから収益源を探す",
+        date: "2026.01.05",
+        description:
+          "業界のプレイヤー、利益配分、ボトルネックを並べ、新規参入の余地を読み解きます。",
+        image: "/blog/blog_post_5_1768848750922.webp",
+      },
+      {
+        title: "規制変化を市場機会として読む",
+        date: "2025.12.29",
+        description:
+          "制度変更の背景、影響範囲、適応コストを分解し、早期に動ける領域を探します。",
+        image: "/blog/blog_post_6_1768848765056.webp",
+      },
+    ],
   },
   {
-    title: "プロダクト仮説を磨くインタビュー設計",
-    category: "Discovery",
-    date: "2026.01.10",
-    description:
-      "顧客課題の粒度をそろえ、検証可能な事業仮説へ落とし込むためのインタビュー設計です。",
-    image: "/blog/blog_post_4_1768848735398.webp",
+    name: "Discovery",
+    summary: "顧客課題、仮説検証、インタビュー設計に関する探索フェーズの記録。",
+    notes: [
+      {
+        title: "プロダクト仮説を磨くインタビュー設計",
+        date: "2026.01.10",
+        description:
+          "顧客課題の粒度をそろえ、検証可能な事業仮説へ落とし込むためのインタビュー設計です。",
+        image: "/blog/blog_post_4_1768848735398.webp",
+      },
+      {
+        title: "課題インタビューで聞くべき順番",
+        date: "2026.01.03",
+        description:
+          "現状行動、代替手段、不満、支払い意欲を自然に掘り下げるための質問設計です。",
+        image: "/blog/blog_post_7_1768850538178.webp",
+      },
+      {
+        title: "検証ログを次の仮説へつなげる",
+        date: "2025.12.27",
+        description:
+          "インタビュー結果を単発の気づきで終わらせず、仮説更新とMVP設計へ接続します。",
+        image: "/blog/blog_post_8_1768850554501.webp",
+      },
+    ],
   },
 ];
 ---
@@ -70,33 +184,143 @@ const posts = [
   />
 
   <section class="mx-auto mb-12 max-w-7xl px-4 md:mb-16">
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <div
+      class="reveal mb-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-6"
+      role="tablist"
+      aria-label="Blog categories"
+    >
       {
-        posts.map((post) => (
-          <article class="reveal group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-all hover:border-primary/50 hover:shadow-md">
-            <div class="overflow-hidden">
-              <img
-                src={post.image}
-                alt=""
-                loading="lazy"
-                class="aspect-video w-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </div>
-            <div class="flex grow flex-col p-7">
-              <div class="mb-4 flex items-center justify-between gap-4 text-sm">
-                <span class="font-semibold text-primary">{post.category}</span>
-                <time class="text-muted-foreground">{post.date}</time>
-              </div>
-              <h2 class="mb-3 text-2xl font-bold tracking-tight text-foreground">
-                {post.title}
-              </h2>
-              <p class="grow text-sm leading-7 text-muted-foreground">
-                {post.description}
-              </p>
-            </div>
-          </article>
+        categories.map((category, index) => (
+          <button
+            type="button"
+            role="tab"
+            id={`blog-tab-${category.name}`}
+            aria-controls={`blog-panel-${category.name}`}
+            aria-selected={index === 0 ? "true" : "false"}
+            data-blog-tab={category.name}
+            class:list={[
+              "rounded-2xl border px-4 py-4 text-left transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+              index === 0
+                ? "border-primary bg-primary text-white shadow-md"
+                : "border-border bg-card text-foreground hover:border-primary/50",
+            ]}
+          >
+            <span class="block text-sm font-bold">{category.name}</span>
+            <span
+              class:list={[
+                "mt-1 block text-xs leading-5",
+                index === 0 ? "text-white/80" : "text-muted-foreground",
+              ]}
+            >
+              {category.notes.length} Notes
+            </span>
+          </button>
         ))
       }
     </div>
+
+    {
+      categories.map((category, index) => (
+        <section
+          id={`blog-panel-${category.name}`}
+          aria-labelledby={`blog-tab-${category.name}`}
+          data-blog-panel={category.name}
+          class:list={[index !== 0 && "hidden"]}
+          role="tabpanel"
+        >
+          <div class="reveal mb-6 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p class="mb-2 text-sm font-semibold text-primary">
+                {category.name}
+              </p>
+              <h2 class="text-3xl font-bold tracking-tight md:text-4xl">
+                {category.name} Notes
+              </h2>
+            </div>
+            <p class="max-w-2xl text-sm leading-7 text-muted-foreground">
+              {category.summary}
+            </p>
+          </div>
+
+          <div class="grid gap-6">
+            {category.notes.map((note) => (
+              <article class="reveal group grid overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-all hover:border-primary/50 hover:shadow-md md:grid-cols-[280px_1fr]">
+                <div class="overflow-hidden bg-muted/40">
+                  <img
+                    src={note.image}
+                    alt=""
+                    loading="lazy"
+                    class="h-full min-h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105 md:aspect-auto"
+                  />
+                </div>
+                <div class="flex flex-col p-6 md:p-8">
+                  <div class="mb-4 flex flex-wrap items-center gap-3 text-sm">
+                    <span class="rounded-full bg-primary/10 px-3 py-1 font-semibold text-primary">
+                      {category.name}
+                    </span>
+                    <time class="text-muted-foreground">{note.date}</time>
+                  </div>
+                  <h3 class="mb-3 text-2xl font-bold tracking-tight text-foreground">
+                    {note.title}
+                  </h3>
+                  <p class="text-sm leading-7 text-muted-foreground">
+                    {note.description}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      ))
+    }
   </section>
+
+  <script>
+    const setupBlogTabs = () => {
+      const tabs = Array.from(
+        document.querySelectorAll<HTMLButtonElement>("[data-blog-tab]"),
+      );
+      const panels = Array.from(
+        document.querySelectorAll<HTMLElement>("[data-blog-panel]"),
+      );
+
+      const activateCategory = (category: string) => {
+        tabs.forEach((tab) => {
+          const isActive = tab.dataset.blogTab === category;
+
+          tab.setAttribute("aria-selected", String(isActive));
+          tab.classList.toggle("border-primary", isActive);
+          tab.classList.toggle("bg-primary", isActive);
+          tab.classList.toggle("text-white", isActive);
+          tab.classList.toggle("shadow-md", isActive);
+          tab.classList.toggle("border-border", !isActive);
+          tab.classList.toggle("bg-card", !isActive);
+          tab.classList.toggle("text-foreground", !isActive);
+
+          const noteCount = tab.querySelector("span:last-child");
+          noteCount?.classList.toggle("text-white/80", isActive);
+          noteCount?.classList.toggle("text-muted-foreground", !isActive);
+        });
+
+        panels.forEach((panel) => {
+          panel.classList.toggle(
+            "hidden",
+            panel.dataset.blogPanel !== category,
+          );
+        });
+      };
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const category = tab.dataset.blogTab;
+
+          if (category) {
+            activateCategory(category);
+          }
+        });
+      });
+    };
+
+    document.addEventListener("astro:page-load", setupBlogTabs);
+  </script>
 </BaseLayout>
