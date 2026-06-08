@@ -1,0 +1,102 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Content from "@/components/widgets/Content.astro";
+
+const metadata = {
+  title: "Blog",
+  description:
+    "Future Trends Researchのリサーチ、事業開発、AI活用に関する記事を掲載しています。",
+};
+
+const posts = [
+  {
+    title: "未来技術リサーチの始め方",
+    category: "Research",
+    date: "2026.01.20",
+    description:
+      "技術トレンドを事業機会に変えるための情報収集、仮説づくり、検証の進め方を整理します。",
+    image: "/blog/welcome.webp",
+  },
+  {
+    title: "AIエージェント時代の市場分析",
+    category: "AI",
+    date: "2026.01.18",
+    description:
+      "AIツールを使った市場調査の効率化と、人が担うべき判断ポイントについて考えます。",
+    image: "/blog/blog_post_1_1768848683359.webp",
+  },
+  {
+    title: "シード期の事業戦略メモ",
+    category: "Strategy",
+    date: "2026.01.16",
+    description:
+      "初期フェーズの事業に必要な顧客理解、競合整理、ロードマップ設計の観点をまとめます。",
+    image: "/blog/blog_post_2_1768848698871.webp",
+  },
+  {
+    title: "リサーチ成果を伝わる資料にする",
+    category: "Output",
+    date: "2026.01.14",
+    description:
+      "調査結果を意思決定につなげるための構成、表現、エグゼクティブサマリーの作り方です。",
+    image: "/blog/markdown.webp",
+  },
+  {
+    title: "産業構造を見るための基本フレーム",
+    category: "Analysis",
+    date: "2026.01.12",
+    description:
+      "市場規模、バリューチェーン、規制、技術成熟度を組み合わせて産業の変化を読み解きます。",
+    image: "/blog/blog_post_3_1768848720552.webp",
+  },
+  {
+    title: "プロダクト仮説を磨くインタビュー設計",
+    category: "Discovery",
+    date: "2026.01.10",
+    description:
+      "顧客課題の粒度をそろえ、検証可能な事業仮説へ落とし込むためのインタビュー設計です。",
+    image: "/blog/blog_post_4_1768848735398.webp",
+  },
+];
+---
+
+<BaseLayout {metadata}>
+  <Content
+    tagline="Blog"
+    title="Research Notes"
+    description={[
+      "未来技術、AI活用、事業開発、マーケットリサーチに関する知見を発信しています。",
+    ]}
+  />
+
+  <section class="mx-auto mb-12 max-w-7xl px-4 md:mb-16">
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {
+        posts.map((post) => (
+          <article class="reveal group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-all hover:border-primary/50 hover:shadow-md">
+            <div class="overflow-hidden">
+              <img
+                src={post.image}
+                alt=""
+                loading="lazy"
+                class="aspect-video w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div class="flex grow flex-col p-7">
+              <div class="mb-4 flex items-center justify-between gap-4 text-sm">
+                <span class="font-semibold text-primary">{post.category}</span>
+                <time class="text-muted-foreground">{post.date}</time>
+              </div>
+              <h2 class="mb-3 text-2xl font-bold tracking-tight text-foreground">
+                {post.title}
+              </h2>
+              <p class="grow text-sm leading-7 text-muted-foreground">
+                {post.description}
+              </p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
