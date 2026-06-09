@@ -4,7 +4,7 @@ date: "2025-12-27"
 category: "Discovery"
 description: "インタビュー結果を単発の気づきで終わらせず、仮説更新とMVP設計へ接続します。"
 image: "/blog/blog_post_8_1768850554501.webp"
-slug: "2025-12-27-validation-log-hypothesis-iteration"
+slug: "Discovery-2025-12-27-validation-log-hypothesis-iteration"
 ---
 
 ## 検証活動を組織の知恵にする

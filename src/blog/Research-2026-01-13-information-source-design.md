@@ -4,7 +4,7 @@ date: "2026-01-13"
 category: "Research"
 description: "論文、特許、統計、業界ニュースを組み合わせて、初期シグナルを継続的に観測する方法です。"
 image: "/blog/blog_post_5_1768848750922.webp"
-slug: "2026-01-13-information-source-design"
+slug: "Research-2026-01-13-information-source-design"
 ---
 
 ## 情報ソース設計の重要性

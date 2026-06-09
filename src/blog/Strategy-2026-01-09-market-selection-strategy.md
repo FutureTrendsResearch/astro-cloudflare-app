@@ -4,7 +4,7 @@ date: "2026-01-09"
 category: "Strategy"
 description: "市場規模、参入余地、顧客課題の深さを比較し、集中すべき初期市場を定めるための視点です。"
 image: "/blog/blog_post_9_1768850568154.webp"
-slug: "2026-01-09-market-selection-strategy"
+slug: "Strategy-2026-01-09-market-selection-strategy"
 ---
 
 ## どの市場で戦うべきかという問い

@@ -4,7 +4,7 @@ date: "2026-01-02"
 category: "Strategy"
 description: "機能表ではなく、顧客価値、価格、チャネル、スイッチングコストから差別化を整理します。"
 image: "/blog/blog_post_10_1768850582328.webp"
-slug: "2026-01-02-competitive-analysis-framework"
+slug: "Strategy-2026-01-02-competitive-analysis-framework"
 ---
 
 ## 機能比較表の限界を超える

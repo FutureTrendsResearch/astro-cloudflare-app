@@ -4,7 +4,7 @@ date: "2026-01-12"
 category: "Analysis"
 description: "市場規模、バリューチェーン、規制、技術成熟度を組み合わせて産業の変化を読み解きます。"
 image: "/blog/blog_post_3_1768848720552.webp"
-slug: "2026-01-12-industry-structure-framework"
+slug: "Analysis-2026-01-12-industry-structure-framework"
 ---
 
 ## 産業を構造化して分析する

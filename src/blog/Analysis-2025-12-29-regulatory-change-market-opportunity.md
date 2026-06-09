@@ -4,7 +4,7 @@ date: "2025-12-29"
 category: "Analysis"
 description: "制度変更の背景、影響範囲、適応コストを分解し、早期に動ける領域を探します。"
 image: "/blog/blog_post_6_1768848765056.webp"
-slug: "2025-12-29-regulatory-change-market-opportunity"
+slug: "Analysis-2025-12-29-regulatory-change-market-opportunity"
 ---
 
 ## 法規制の変更はピンチかチャンスか

@@ -4,7 +4,7 @@ date: "2026-01-10"
 category: "Discovery"
 description: "顧客課題の粒度をそろえ、検証可能な事業仮説へ落とし込むためのインタビュー設計です。"
 image: "/blog/blog_post_4_1768848735398.webp"
-slug: "2026-01-10-product-hypothesis-interview"
+slug: "Discovery-2026-01-10-product-hypothesis-interview"
 ---
 
 ## 顧客開発インタビューの設計図

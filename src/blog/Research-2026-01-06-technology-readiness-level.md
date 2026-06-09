@@ -4,7 +4,7 @@ date: "2026-01-06"
 category: "Research"
 description: "TRL、導入障壁、コスト曲線を並べ、投資やPoCのタイミングを見極めるためのメモです。"
 image: "/blog/blog_post_6_1768848765056.webp"
-slug: "2026-01-06-technology-readiness-level"
+slug: "Research-2026-01-06-technology-readiness-level"
 ---
 
 ## 事業判断に技術成熟度(TRL)を活かす

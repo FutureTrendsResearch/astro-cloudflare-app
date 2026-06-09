@@ -4,7 +4,7 @@ date: "2025-12-31"
 category: "Output"
 description: "詳細分析を残しながら、意思決定者が短時間で判断できる見出しと図表の設計を考えます。"
 image: "/blog/blog_post_12_1768850610966.webp"
-slug: "2025-12-31-executive-report-granularity"
+slug: "Output-2025-12-31-executive-report-granularity"
 ---
 
 ## レポートの「粒度」をコントロールする

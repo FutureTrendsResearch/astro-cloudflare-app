@@ -4,7 +4,7 @@ date: "2026-01-07"
 category: "Output"
 description: "結論、根拠、示唆、次アクションを1枚に収め、会議で議論が進む資料に整えます。"
 image: "/blog/blog_post_11_1768850597259.webp"
-slug: "2026-01-07-hypothesis-summary-format"
+slug: "Output-2026-01-07-hypothesis-summary-format"
 ---
 
 ## 1枚の紙が会議のスピードを加速させる

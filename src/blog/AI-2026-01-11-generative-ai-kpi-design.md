@@ -4,7 +4,7 @@ date: "2026-01-11"
 category: "AI"
 description: "作業時間の削減だけではなく、品質、再現性、意思決定速度を測るための評価軸をまとめます。"
 image: "/blog/blog_post_7_1768850538178.webp"
-slug: "2026-01-11-generative-ai-kpi-design"
+slug: "AI-2026-01-11-generative-ai-kpi-design"
 ---
 
 ## 生成AI導入の成否を分ける評価指標

@@ -4,7 +4,7 @@ date: "2026-01-04"
 category: "AI"
 description: "人とAIの役割分担、承認ポイント、ログ管理を整理し、安全に業務へ組み込む考え方です。"
 image: "/blog/blog_post_8_1768850554501.webp"
-slug: "2026-01-04-ai-workflow-permission-design"
+slug: "AI-2026-01-04-ai-workflow-permission-design"
 ---
 
 ## 安全で実用的なAI運用のための設計図

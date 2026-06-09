@@ -4,7 +4,7 @@ date: "2026-01-14"
 category: "Output"
 description: "調査結果を意思決定につなげるための構成、表現、エグゼクティブサマリーの作り方です。"
 image: "/blog/markdown.webp"
-slug: "2026-01-14-research-output-documentation"
+slug: "Output-2026-01-14-research-output-documentation"
 ---
 
 ## 調査報告書が読まれない理由

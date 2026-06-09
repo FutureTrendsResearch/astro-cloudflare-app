@@ -4,7 +4,7 @@ date: "2026-01-20"
 category: "Research"
 description: "技術トレンドを事業機会に変えるための情報収集、仮説づくり、検証の進め方を整理します。"
 image: "/blog/welcome.webp"
-slug: "2026-01-20-mirai-gijutsu-research"
+slug: "Research-2026-01-20-mirai-gijutsu-research"
 ---
 
 ## 未来技術リサーチの目的
