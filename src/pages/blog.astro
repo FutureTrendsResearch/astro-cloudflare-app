@@ -19,6 +19,7 @@ const categories = [
         description:
           "技術トレンドを事業機会に変えるための情報収集、仮説づくり、検証の進め方を整理します。",
         image: "/blog/welcome.webp",
+        slug: "2026-01-20-mirai-gijutsu-research",
       },
       {
         title: "兆しを見逃さない情報ソース設計",
@@ -26,6 +27,7 @@ const categories = [
         description:
           "論文、特許、統計、業界ニュースを組み合わせて、初期シグナルを継続的に観測する方法です。",
         image: "/blog/blog_post_5_1768848750922.webp",
+        slug: "2026-01-13-information-source-design",
       },
       {
         title: "技術成熟度を事業判断に接続する",
@@ -33,6 +35,7 @@ const categories = [
         description:
           "TRL、導入障壁、コスト曲線を並べ、投資やPoCのタイミングを見極めるためのメモです。",
         image: "/blog/blog_post_6_1768848765056.webp",
+        slug: "2026-01-06-technology-readiness-level",
       },
     ],
   },
@@ -46,6 +49,7 @@ const categories = [
         description:
           "AIツールを使った市場調査の効率化と、人が担うべき判断ポイントについて考えます。",
         image: "/blog/blog_post_1_1768848683359.webp",
+        slug: "2026-01-18-ai-agent-market-analysis",
       },
       {
         title: "生成AI導入で最初に設計するKPI",
@@ -53,6 +57,7 @@ const categories = [
         description:
           "作業時間の削減だけではなく、品質、再現性、意思決定速度を測るための評価軸をまとめます。",
         image: "/blog/blog_post_7_1768850538178.webp",
+        slug: "2026-01-11-generative-ai-kpi-design",
       },
       {
         title: "AIワークフローの権限設計",
@@ -60,6 +65,7 @@ const categories = [
         description:
           "人とAIの役割分担、承認ポイント、ログ管理を整理し、安全に業務へ組み込む考え方です。",
         image: "/blog/blog_post_8_1768850554501.webp",
+        slug: "2026-01-04-ai-workflow-permission-design",
       },
     ],
   },
@@ -73,6 +79,7 @@ const categories = [
         description:
           "初期フェーズの事業に必要な顧客理解、競合整理、ロードマップ設計の観点をまとめます。",
         image: "/blog/blog_post_2_1768848698871.webp",
+        slug: "2026-01-16-seed-stage-business-strategy",
       },
       {
         title: "勝ち筋を言語化する市場選定",
@@ -80,6 +87,7 @@ const categories = [
         description:
           "市場規模、参入余地、顧客課題の深さを比較し、集中すべき初期市場を定めるための視点です。",
         image: "/blog/blog_post_9_1768850568154.webp",
+        slug: "2026-01-09-market-selection-strategy",
       },
       {
         title: "競合比較を意思決定資料に変える",
@@ -87,6 +95,7 @@ const categories = [
         description:
           "機能表ではなく、顧客価値、価格、チャネル、スイッチングコストから差別化を整理します。",
         image: "/blog/blog_post_10_1768850582328.webp",
+        slug: "2026-01-02-competitive-analysis-framework",
       },
     ],
   },
@@ -100,6 +109,7 @@ const categories = [
         description:
           "調査結果を意思決定につなげるための構成、表現、エグゼクティブサマリーの作り方です。",
         image: "/blog/markdown.webp",
+        slug: "2026-01-14-research-output-documentation",
       },
       {
         title: "1枚で伝える仮説サマリー",
@@ -107,6 +117,7 @@ const categories = [
         description:
           "結論、根拠、示唆、次アクションを1枚に収め、会議で議論が進む資料に整えます。",
         image: "/blog/blog_post_11_1768850597259.webp",
+        slug: "2026-01-07-hypothesis-summary-format",
       },
       {
         title: "経営向けレポートの粒度調整",
@@ -114,6 +125,7 @@ const categories = [
         description:
           "詳細分析を残しながら、意思決定者が短時間で判断できる見出しと図表の設計を考えます。",
         image: "/blog/blog_post_12_1768850610966.webp",
+        slug: "2025-12-31-executive-report-granularity",
       },
     ],
   },
@@ -127,6 +139,7 @@ const categories = [
         description:
           "市場規模、バリューチェーン、規制、技術成熟度を組み合わせて産業の変化を読み解きます。",
         image: "/blog/blog_post_3_1768848720552.webp",
+        slug: "2026-01-12-industry-structure-framework",
       },
       {
         title: "バリューチェーンから収益源を探す",
@@ -134,6 +147,7 @@ const categories = [
         description:
           "業界のプレイヤー、利益配分、ボトルネックを並べ、新規参入の余地を読み解きます。",
         image: "/blog/blog_post_5_1768848750922.webp",
+        slug: "2026-01-05-value-chain-revenue-analysis",
       },
       {
         title: "規制変化を市場機会として読む",
@@ -141,6 +155,7 @@ const categories = [
         description:
           "制度変更の背景、影響範囲、適応コストを分解し、早期に動ける領域を探します。",
         image: "/blog/blog_post_6_1768848765056.webp",
+        slug: "2025-12-29-regulatory-change-market-opportunity",
       },
     ],
   },
@@ -154,6 +169,7 @@ const categories = [
         description:
           "顧客課題の粒度をそろえ、検証可能な事業仮説へ落とし込むためのインタビュー設計です。",
         image: "/blog/blog_post_4_1768848735398.webp",
+        slug: "2026-01-10-product-hypothesis-interview",
       },
       {
         title: "課題インタビューで聞くべき順番",
@@ -161,6 +177,7 @@ const categories = [
         description:
           "現状行動、代替手段、不満、支払い意欲を自然に掘り下げるための質問設計です。",
         image: "/blog/blog_post_7_1768850538178.webp",
+        slug: "2026-01-03-problem-interview-question-design",
       },
       {
         title: "検証ログを次の仮説へつなげる",
@@ -168,6 +185,7 @@ const categories = [
         description:
           "インタビュー結果を単発の気づきで終わらせず、仮説更新とMVP設計へ接続します。",
         image: "/blog/blog_post_8_1768850554501.webp",
+        slug: "2025-12-27-validation-log-hypothesis-iteration",
       },
     ],
   },
@@ -244,7 +262,10 @@ const categories = [
 
           <div class="grid gap-6">
             {category.notes.map((note) => (
-              <article class="reveal group grid overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-all hover:border-primary/50 hover:shadow-md md:grid-cols-[280px_1fr]">
+              <a
+                href={`/blog/${note.slug}`}
+                class="reveal group grid cursor-pointer overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-all hover:border-primary/50 hover:shadow-md md:grid-cols-[280px_1fr]"
+              >
                 <div class="overflow-hidden bg-muted/40">
                   <img
                     src={note.image}
@@ -263,11 +284,15 @@ const categories = [
                   <h3 class="mb-3 text-2xl font-bold tracking-tight text-foreground">
                     {note.title}
                   </h3>
-                  <p class="text-sm leading-7 text-muted-foreground">
+                  <p class="mb-4 text-sm leading-7 text-muted-foreground">
                     {note.description}
                   </p>
+                  <span class="mt-auto inline-flex items-center gap-1 text-sm font-medium text-primary transition-all group-hover:gap-2">
+                    記事を読む
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                  </span>
                 </div>
-              </article>
+              </a>
             ))}
           </div>
         </section>

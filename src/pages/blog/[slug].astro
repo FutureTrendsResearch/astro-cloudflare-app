@@ -1,0 +1,26 @@
+---
+import BlogPostLayout from "@/layouts/BlogPostLayout.astro";
+
+export async function getStaticPaths() {
+  const posts = Object.values(import.meta.glob("../../blog/*.md", { eager: true })) as any[];
+
+  return posts.map((post) => ({
+    params: { slug: post.frontmatter.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { title, date, category, description, image } = post.frontmatter;
+const Content = post.Content;
+---
+
+<BlogPostLayout
+  title={title}
+  date={date}
+  category={category}
+  description={description}
+  image={image}
+>
+  <Content />
+</BlogPostLayout>
