@@ -3,7 +3,7 @@ title: "AIエージェント時代の市場分析"
 date: "2026-01-18"
 category: "AI"
 description: "AIツールを使った市場調査の効率化と、人が担うべき判断ポイントについて考えます。"
-image: "/blog/blog_post_1_1768848683359.webp"
+image: "/blog/AIエージェント時代の市場分析.webp"
 slug: "AI-2026-01-18-ai-agent-market-analysis"
 ---
 

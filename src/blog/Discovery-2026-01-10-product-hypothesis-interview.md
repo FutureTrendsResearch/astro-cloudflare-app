@@ -3,7 +3,7 @@ title: "プロダクト仮説を磨くインタビュー設計"
 date: "2026-01-10"
 category: "Discovery"
 description: "顧客課題の粒度をそろえ、検証可能な事業仮説へ落とし込むためのインタビュー設計です。"
-image: "/blog/blog_post_4_1768848735398.webp"
+image: "/blog/プロダクト仮説を磨くインタビュー設計.webp"
 slug: "Discovery-2026-01-10-product-hypothesis-interview"
 ---
 

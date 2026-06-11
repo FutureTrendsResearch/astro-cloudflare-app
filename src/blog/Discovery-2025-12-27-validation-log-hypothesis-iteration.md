@@ -3,7 +3,7 @@ title: "検証ログを次の仮説へつなげる"
 date: "2025-12-27"
 category: "Discovery"
 description: "インタビュー結果を単発の気づきで終わらせず、仮説更新とMVP設計へ接続します。"
-image: "/blog/blog_post_8_1768850554501.webp"
+image: "/blog/検証ログを次の仮説へつなげる.webp"
 slug: "Discovery-2025-12-27-validation-log-hypothesis-iteration"
 ---
 

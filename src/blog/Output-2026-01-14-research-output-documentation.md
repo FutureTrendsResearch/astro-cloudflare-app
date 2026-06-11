@@ -3,7 +3,7 @@ title: "リサーチ成果を伝わる資料にする"
 date: "2026-01-14"
 category: "Output"
 description: "調査結果を意思決定につなげるための構成、表現、エグゼクティブサマリーの作り方です。"
-image: "/blog/markdown.webp"
+image: "/blog/リサーチ成果を伝わる資料にする.webp"
 slug: "Output-2026-01-14-research-output-documentation"
 ---
 
