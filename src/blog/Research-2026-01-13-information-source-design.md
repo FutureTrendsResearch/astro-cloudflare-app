@@ -3,7 +3,7 @@ title: "兆しを見逃さない情報ソース設計"
 date: "2026-01-13"
 category: "Research"
 description: "論文、特許、統計、業界ニュースを組み合わせて、初期シグナルを継続的に観測する方法です。"
-image: "/blog/兆しを見逃さない情報ソース設計.webp"
+image: "/blog/information-source-design.webp"
 slug: "Research-2026-01-13-information-source-design"
 ---
 

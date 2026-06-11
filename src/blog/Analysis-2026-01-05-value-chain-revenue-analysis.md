@@ -3,7 +3,7 @@ title: "バリューチェーンから収益源を探す"
 date: "2026-01-05"
 category: "Analysis"
 description: "業界のプレイヤー、利益配分、ボトルネックを並べ、新規参入の余地を読み解きます。"
-image: "/blog/バリューチェーンから収益源を探す.webp"
+image: "/blog/value-chain-revenue-analysis.webp"
 slug: "Analysis-2026-01-05-value-chain-revenue-analysis"
 ---
 

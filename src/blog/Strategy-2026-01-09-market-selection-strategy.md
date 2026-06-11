@@ -3,7 +3,7 @@ title: "勝ち筋を言語化する市場選定"
 date: "2026-01-09"
 category: "Strategy"
 description: "市場規模、参入余地、顧客課題の深さを比較し、集中すべき初期市場を定めるための視点です。"
-image: "/blog/勝ち筋を言語化する市場選定.webp"
+image: "/blog/market-selection-strategy.webp"
 slug: "Strategy-2026-01-09-market-selection-strategy"
 ---
 

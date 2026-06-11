@@ -3,7 +3,7 @@ title: "経営向けレポートの粒度調整"
 date: "2025-12-31"
 category: "Output"
 description: "詳細分析を残しながら、意思決定者が短時間で判断できる見出しと図表の設計を考えます。"
-image: "/blog/経営向けレポートの粒度調整.webp"
+image: "/blog/executive-report-granularity.webp"
 slug: "Output-2025-12-31-executive-report-granularity"
 ---
 

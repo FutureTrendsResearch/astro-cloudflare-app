@@ -3,7 +3,7 @@ title: "規制変化を市場機会として読む"
 date: "2025-12-29"
 category: "Analysis"
 description: "制度変更の背景、影響範囲、適応コストを分解し、早期に動ける領域を探します。"
-image: "/blog/規制変化を市場機会として読む.webp"
+image: "/blog/regulatory-change-market-opportunity.webp"
 slug: "Analysis-2025-12-29-regulatory-change-market-opportunity"
 ---
 
