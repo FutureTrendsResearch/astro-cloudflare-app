@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Content from "@/components/widgets/Content.astro";
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
 
 const metadata = {
   title: "Blog",
@@ -12,6 +14,11 @@ const metadata = {
 const posts = Object.values(
   import.meta.glob("../blog/*.md", { eager: true })
 ) as any[];
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/images/*.{jpeg,jpg,png,gif,webp}",
+  { eager: true }
+);
 
 const categorySummaries: Record<string, string> = {
   Research: "未来技術、市場変化、産業構造を読み解くためのリサーチノート。",
@@ -27,15 +34,22 @@ const categoryNames = ["Research", "AI", "Strategy", "Output", "Analysis", "Disc
 const categories = categoryNames.map((name) => {
   const notes = posts
     .filter((post) => post.frontmatter.category === name)
-    .map((post) => ({
-      title: post.frontmatter.title,
-      // 表示用に "YYYY-MM-DD" を "YYYY.MM.DD" に変換
-      date: post.frontmatter.date.replace(/-/g, "."),
-      description: post.frontmatter.description,
-      image: post.frontmatter.image,
-      slug: post.frontmatter.slug,
-      rawDate: post.frontmatter.date, // ソート用
-    }))
+    .map((post) => {
+      const imageStr = post.frontmatter.image;
+      const imagePath = imageStr?.startsWith("src/") ? `/${imageStr}` : imageStr;
+      const imgMetadata = images[imagePath]?.default;
+
+      return {
+        title: post.frontmatter.title,
+        // 表示用に "YYYY-MM-DD" を "YYYY.MM.DD" に変換
+        date: post.frontmatter.date.replace(/-/g, "."),
+        description: post.frontmatter.description,
+        image: imageStr,
+        imgMetadata,
+        slug: post.frontmatter.slug,
+        rawDate: post.frontmatter.date, // ソート用
+      };
+    })
     .sort((a, b) => b.rawDate.localeCompare(a.rawDate));
 
   return {
@@ -121,12 +135,21 @@ const categories = categoryNames.map((name) => {
                 class="reveal group grid cursor-pointer overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-all hover:border-primary/50 hover:shadow-md md:grid-cols-[280px_1fr]"
               >
                 <div class="overflow-hidden bg-muted/40">
-                  <img
-                    src={note.image}
-                    alt=""
-                    loading="lazy"
-                    class="h-full min-h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105 md:aspect-auto"
-                  />
+                  {note.imgMetadata ? (
+                    <Image
+                      src={note.imgMetadata}
+                      alt=""
+                      loading="lazy"
+                      class="h-full min-h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105 md:aspect-auto"
+                    />
+                  ) : (
+                    <img
+                      src={note.image}
+                      alt=""
+                      loading="lazy"
+                      class="h-full min-h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105 md:aspect-auto"
+                    />
+                  )}
                 </div>
                 <div class="flex flex-col p-6 md:p-8">
                   <div class="mb-4 flex flex-wrap items-center gap-3 text-sm">
