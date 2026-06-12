@@ -3,7 +3,7 @@ title: "競合比較を意思決定資料に変える"
 date: "2026-01-02"
 category: "Strategy"
 description: "機能表ではなく、顧客価値、価格、チャネル、スイッチングコストから差別化を整理します。"
-image: "/blog/competitive-analysis-framework.webp"
+image: "src/assets/images/21-image.webp"
 slug: "Strategy-2026-01-02-competitive-analysis-framework"
 ---
 

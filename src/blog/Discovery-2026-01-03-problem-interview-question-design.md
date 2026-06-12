@@ -3,7 +3,7 @@ title: "課題インタビューで聞くべき順番"
 date: "2026-01-03"
 category: "Discovery"
 description: "現状行動、代替手段、不満、支払い意欲を自然に掘り下げるための質問設計です。"
-image: "/blog/problem-interview-question-design.webp"
+image: "src/assets/images/16-image.webp"
 slug: "Discovery-2026-01-03-problem-interview-question-design"
 ---
 

@@ -3,7 +3,7 @@ title: "1枚で伝える仮説サマリー"
 date: "2026-01-07"
 category: "Output"
 description: "結論、根拠、示唆、次アクションを1枚に収め、会議で議論が進む資料に整えます。"
-image: "/blog/hypothesis-summary-format.webp"
+image: "src/assets/images/17-image.webp"
 slug: "Output-2026-01-07-hypothesis-summary-format"
 ---
 

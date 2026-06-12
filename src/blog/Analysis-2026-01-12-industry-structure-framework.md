@@ -3,7 +3,7 @@ title: "産業構造を見るための基本フレーム"
 date: "2026-01-12"
 category: "Analysis"
 description: "市場規模、バリューチェーン、規制、技術成熟度を組み合わせて産業の変化を読み解きます。"
-image: "/blog/industry-structure-framework.webp"
+image: "src/assets/images/35-image.webp"
 slug: "Analysis-2026-01-12-industry-structure-framework"
 ---
 

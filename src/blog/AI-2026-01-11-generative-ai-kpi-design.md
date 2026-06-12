@@ -3,7 +3,7 @@ title: "生成AI導入で最初に設計するKPI"
 date: "2026-01-11"
 category: "AI"
 description: "作業時間の削減だけではなく、品質、再現性、意思決定速度を測るための評価軸をまとめます。"
-image: "/blog/generative-ai-kpi-design.webp"
+image: "src/assets/images/12-image.webp"
 slug: "AI-2026-01-11-generative-ai-kpi-design"
 ---
 

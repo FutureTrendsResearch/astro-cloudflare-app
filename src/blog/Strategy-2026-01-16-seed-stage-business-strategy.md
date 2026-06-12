@@ -3,7 +3,7 @@ title: "シード期の事業戦略メモ"
 date: "2026-01-16"
 category: "Strategy"
 description: "初期フェーズの事業に必要な顧客理解、競合整理、ロードマップ設計の観点をまとめます。"
-image: "/blog/seed-stage-business-strategy.webp"
+image: "src/assets/images/24-image.webp"
 slug: "Strategy-2026-01-16-seed-stage-business-strategy"
 ---
 

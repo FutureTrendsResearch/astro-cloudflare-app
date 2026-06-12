@@ -3,7 +3,7 @@ title: "AIワークフローの権限設計"
 date: "2026-01-04"
 category: "AI"
 description: "人とAIの役割分担、承認ポイント、ログ管理を整理し、安全に業務へ組み込む考え方です。"
-image: "/blog/ai-workflow-permission-design.webp"
+image: "src/assets/images/10-image.webp"
 slug: "AI-2026-01-04-ai-workflow-permission-design"
 ---
 
